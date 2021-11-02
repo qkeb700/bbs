@@ -1,0 +1,14 @@
+@charset "UTF-8";
+body{
+	font-family: 'Noto Sans KR', sans-serif;
+    background-color:#ededed;
+}
+#joinform{
+	margin: 10px auto;
+	width: 70%;
+	border: 1px solid #999;
+	box-shadow: 0 0 20px 5px rgba(0,0,0,0.15);
+	background: #fff;
+	border-radius: 8px;
+	padding: 30px;
+}
