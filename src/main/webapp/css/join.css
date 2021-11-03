@@ -12,3 +12,29 @@ body{
 	border-radius: 8px;
 	padding: 30px;
 }
+input[type=checkbox]{
+	display:none;
+}
+.cbox{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+}
+.all input[type=checkbox]+span.cbox{
+    background: url(../images/check.jpg) no-repeat -53px -64px;
+    background-size:100px;
+    vertical-align:middle;
+}
+.all input[type=checkbox]:checked+span.cbox{
+    background: url(../images/check.jpg) no-repeat -53px -7px;
+    background-size:100px;
+    vertical-align:middle;
+}
+.yak{
+	overflow-y:auto;
+	height: 100px;
+	background-color: #ededed;
+	border: 1px solid #ddd;
+	white-space: pre-line;
+	padding: 10px;
+}
