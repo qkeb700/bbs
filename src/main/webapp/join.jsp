@@ -7,7 +7,7 @@
 <body>
 	<h1 class="text-center my-5">회원가입</h1>
 	<div class="container">
-		<form action="join02.jsp" name="joinform" id="joinform">
+		<form action="join02.jsp" name="joinform" id="joinform" method="post">
 			<div class="form-group">
 				<label class="all">
 					<input type="checkbox" name="all" id="all" value="ok" />
