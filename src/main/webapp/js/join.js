@@ -18,4 +18,30 @@ $(function(){
 			return false;
 		}
 	})
+	
+	$('#checkid').click(function(){
+		let userid = $('#userid').val();
+		if(!userid){
+			alert("아이디를 입력하세요.");
+			$('#userid').focus();
+			return false;
+		}
+		$('#fuserid').val(userid);
+		$('.viewfind').fadeIn();
+	})
+	
+	$(document).on("click", ".btn-find", function(){
+		let userid = $('#fuserid').val();
+		$.get("include/searchid.jsp", {userid: userid},
+		function(data){
+			if(data==1){
+				$('.idable').css("cursor", "pointer").css("text-decoration", "underline").html("사용할 수 있는 아이디입니다.(사용하기)");
+			} else{
+				$('.idable'),html("사용할 수 없는 아이디입니다.");
+				$('#fuserid').val("");
+				$('#userid').val("");
+			}	
+		})
+	})
+	
 })

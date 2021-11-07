@@ -81,4 +81,18 @@
 		</form>
 	</div>
 	
+	<div class="viewfind">
+		<div class="form-group">
+			<div class="row">
+				<div class="col-7">
+					<input type="text" class="form-control" id="fuserid" name="fuserid" />
+				</div>
+				<div class="col-5">
+					<button type="button" class="btn btn-warning btn-outline-success btn-find">중복검색</button>
+				</div>
+			</div>
+		</div>
+		<span class="idable"></span>
+	</div>
+	
 <%@ include file="include/footer.jsp" %>
