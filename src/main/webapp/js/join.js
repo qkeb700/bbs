@@ -37,7 +37,7 @@ $(function(){
 			if(data==1){
 				$('.idable').css("cursor", "pointer").css("text-decoration", "underline").html("사용할 수 있는 아이디입니다.(사용하기)");
 			} else{
-				$('.idable'),html("사용할 수 없는 아이디입니다.");
+				$('.idable').html("사용할 수 없는 아이디입니다.");
 				$('#fuserid').val("");
 				$('#userid').val("");
 			}	
