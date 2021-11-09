@@ -44,4 +44,14 @@ $(function(){
 		})
 	})
 	
+	$(document).on("click", ".idable", function(){
+		if($('#fuserid').val()){
+			let fuserid = $('#fuserid').val();
+			$('#userid').val(fuserid);
+			$('.findid').val("ok");
+			alert(fuserid + "로 사용합니다.");
+		}
+		$(".viewfind").fadeOut();
+	})
+	
 })

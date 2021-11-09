@@ -27,7 +27,8 @@
 <body>
 	<h1 class="text-center py-5">회원가입</h3>
 	<div class="container">
-		<form action="joinok.jsp" method="post" id="joinform" name="joinform">
+		<form action="joinok.jsp" method="post" id="joinform2" name="joinform2">
+			<input type="hidden" name="findid" class="findid" />
 			<div class="form-group">
 				<label for="userid">아이디</label>
 				<div class="row">
