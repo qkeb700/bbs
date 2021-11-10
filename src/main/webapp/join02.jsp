@@ -29,6 +29,7 @@
 	<div class="container">
 		<form action="joinok.jsp" method="post" id="joinform2" name="joinform2">
 			<input type="hidden" name="findid" class="findid" />
+			<input type="hidden" name="tel" id="tel" />
 			<div class="form-group">
 				<label for="userid">아이디</label>
 				<div class="row">
