@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ include file="include/header.jsp" %> 
 
-<%--
+<%
 	String ok = null;
 	String geo = null;
 	ok = request.getParameter("yak01");
@@ -16,7 +16,7 @@
 	</script>
 <%		
 	}
---%> 
+%>
 
 <!DOCTYPE html>
 <html>
@@ -30,6 +30,8 @@
 		<form action="joinok.jsp" method="post" id="joinform2" name="joinform2">
 			<input type="hidden" name="findid" class="findid" />
 			<input type="hidden" name="tel" id="tel" />
+			<input type="hidden" name="level" value="1" />
+			<input type="hidden" name="geo" value="<%=geo%>" />
 			<div class="form-group">
 				<label for="userid">아이디</label>
 				<div class="row">

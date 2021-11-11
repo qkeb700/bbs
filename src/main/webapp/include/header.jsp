@@ -13,4 +13,4 @@
     <link rel="stylesheet" href="/bbsSelf/css/plugin/animate.min.css">
     <link rel="stylesheet" href="/bbsSelf/css/plugin/bootstrap.min.css">
     <link rel="stylesheet" href="/bbsSelf/css/join.css">
-    <link rel="stylesheet" href="/bbsSelf/css/style.css">
+   <%--<link rel="stylesheet" href="/bbsSelf/css/style.css">--%>

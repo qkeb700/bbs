@@ -8,7 +8,7 @@ public class DBClass {
 	public static String loadMySQLDriver() {
 		url = null;
 		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
+			Class.forName("com.mysql.jdbc.Driver");
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
