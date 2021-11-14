@@ -23,6 +23,9 @@
 			ok = 1;
 			dbUserpass = rs.getString("userpass");
 		}
+		rs.close();
+		pstmt.close();
+		conn.close();
 	}catch(Exception e){
 		e.printStackTrace();
 	}
