@@ -31,7 +31,7 @@
 					<div class="findpwd">
 						<form action="include/findpwdok.jsp" id="findpwdform" method="post" >
 							<input type="text" name="userid" id="userid" placeholder="아이디" />
-							<input type="text" name="useremail" id="useremail" placeholder="이메일" />
+							<input type="text" name="useremail2" id="useremail2" placeholder="이메일" />
 							<button type="submit" > 비밀번호 찾기 </button>
 						</form>					
 					</div>
