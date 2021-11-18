@@ -4,9 +4,27 @@ body {
    font-size: 16px;
    color: #333;
 }
-li a{
+ul{
 	list-style-type:none;
 }
-.user-form{
-margin:-5px-5px 0;
+.aside-nav{
+	list-style-type:none;
+}
+.left{
+	width: 200px;
+	padding: 20px 10px 10px 0px;
+	margin-top: 30px;
+	border-right: 1px solid #999;
+	position: fixed;
+	height: 100%;
+}
+.brand{
+	margin-left: 15px;
+	color: #333;
+	font-size: 20px;
+	font-weight: bold;
+}
+.main{
+	width: calc(100% - 280px);
+	margin-left: 200px;
 }

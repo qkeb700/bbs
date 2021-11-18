@@ -32,7 +32,7 @@
 		}
 		
 		while(rs.next()){
-			out.println("<li><a href='index.jsp?cnum=" + rs.getInt("num") + "'>" + rs.getString("category") + "</a></li>");
+			out.println("<li><a style='list-style-type:none' href='index.jsp?cnum=" + rs.getInt("num") + "'>" + rs.getString("category") + "</a></li>");
 		}
 		result.close();
 		pt.close();

@@ -1,12 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+<%@ include file="include/header.jsp" %>
 </head>
 <body>
-	hi
+	<div class="container-fluid">
+		<div class="row">
+			<div class="left">
+				<div class="aside">
+					<a href="#" class="brand">Hoyeon's BBS</a>
+				</div>
+				<%@ include file="include/aside.jsp" %>
+			</div>
+			<div class="main">
+				<%@ include file="topnav.jsp" %>
+				<%@ include file="board/list.jsp" %>
+			</div>		
+		</div>
+	</div>
 </body>
 </html>
