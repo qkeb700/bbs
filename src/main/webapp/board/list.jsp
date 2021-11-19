@@ -134,7 +134,7 @@
 				</form>
 			</div>
 			 <div class="col-12 col-md-8 my-3 text-right">
-        		<a href="write.html"><button type="button" class="btn btn-dark px-4 btn-write">쓰기</button></a>
+        		<a href="write.jsp?num=<%=request.getParameter("num")%>"><button type="button" class="btn btn-dark px-4 btn-write">쓰기</button></a>
       		</div>
 		</div>
 		<ul class="pagination my-3 justify-content-center">
