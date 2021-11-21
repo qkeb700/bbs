@@ -6,6 +6,6 @@
     <script src="/bbsSelf/js/plugin/summernote-bs4.js"></script>
     <script src="/bbsSelf/js/join.js"></script>
     <script src="/bbsSelf/js/login.js"></script>
-    <%-- <script src="/bbsSelf/js/bbsSelf.js"></script>--%>
+    <script src="/bbsSelf/js/bbsSelf.js"></script>
 </body>
 </html>

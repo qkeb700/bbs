@@ -28,3 +28,39 @@ ul{
 	width: calc(100% - 280px);
 	margin-left: 200px;
 }
+/**** write.jsp ****/
+input[type=text],input[type=password]{
+	padding: 7px 6px;
+	text-align:center;
+}
+.write-title{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	border:2px solid #333;
+	width:100%;
+}
+.write-title li{
+	margin:0;
+	padding:0;
+	border-bottom:1px solid #ededed;
+	
+}
+.write-title .label{
+	font-size:18px;
+	font-weight:bold;
+	line-height:70px;
+	border-bottom:1px solid #ccc;
+}
+.btn-area .btn {
+      margin-left: 15px;
+      margin-right: 15px;
+      letter-spacing: 15px;
+      padding-left: 30px;
+      text-align: center;
+      font-weight: bold;
+}
+li.content{
+	padding:10px;
+}
+

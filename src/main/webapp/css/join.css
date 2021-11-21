@@ -12,7 +12,7 @@ body{
 	border-radius: 8px;
 	padding: 30px;
 }
-input[type=checkbox]{
+#joinform input[type=checkbox]{
 	display:none;
 }
 .cbox{

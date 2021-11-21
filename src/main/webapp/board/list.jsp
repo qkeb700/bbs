@@ -1,8 +1,28 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ page import="java.sql.*, bbsSelf.DBClass" %>	
+	pageEncoding="UTF-8"%>	
 <%@ include file="/include/header.jsp"%>
 <%
+	String sql1 ="select count(*) from bbs01 where category = ?";
+	String sql2 = "select * from bbs01 where category = ? order by num desc";
+	
+	PreparedStatement pstmt1 = null;
+	ResultSet rs1 = null;
+	PreparedStatement pstmt2 = null;
+	ResultSet rs2 = null;
+	
+	pstmt1 = conn.prepareStatement(sql1);
+	pstmt1.setString(1, cnum);
+	rs1 = pstmt1.executeQuery();
+	
+	pstmt2 = conn.prepareStatement(sql2);
+	pstmt2.setString(1, cnum);
+	rs2 = pstmt2.executeQuery();
+	
+	int cot = 0;
+	
+	while(rs1.next()){
+		cot = rs1.getInt(1);
+	}
 	
 %>
 <meta charset="UTF-8">
@@ -11,6 +31,7 @@
 <body>
 	<div class="container">
 		<h1 class="text-center my-5">연습용 게시판</h1>
+		<p>전체 게시글 : <%=cot %></p>
 		<table class="table table-hover">
 			<colgroup class="mobile-hidden">
 				<col width='55'>
@@ -29,86 +50,24 @@
 				</tr>
 			</thead>
 			<tbody>
+			<%
+				while(rs2.next()){			
+					String date = rs2.getString("udate").substring(0,10);
+			%>
 				<tr>
-					<td class="mobile-hidden">8</td>
-					<td><a href="view.html" class="icon pc-hidden"><i
-							class="fas fa-user-tie"></i></a> <a href="view.html"
-						class="utxt pc-hidden">홍길동 [2021.08.12]</a> <a href="view.html">제목입니다.</a>
+					<td class="mobile-hidden"><%=rs2.getInt("num") %></td>
+					<td>
+						<a href="board/view.jsp?num=<%=rs2.getInt("num") %>?cnum=<%=cnum %>" class="icon pc-hidden"><i class="fas fa-user-tie"></i></a> 
+						<a href="board/view.jsp?num=<%=rs2.getInt("num") %>?cnum=<%=cnum %>" class="utxt pc-hidden"><%=rs2.getString("username") %> [<%=date %>]</a> 
+						<a href="board/view.jsp?num=<%=rs2.getInt("num") %>?cnum=<%=cnum %>"><%=rs2.getString("subject") %>.</a>
 					</td>
-					<td class="mobile-hidden"><a href="view.html">홍길동</a></td>
-					<td class="mobile-hidden">2021.08.12</td>
-					<td class="mobile-hidden">265</td>
+					<td class="mobile-hidden"><a href="board/view.jsp?num=<%=rs2.getInt("num") %>"><%=rs2.getString("username") %></a></td>
+					<td class="mobile-hidden"><%=date %></td>
+					<td class="mobile-hidden"><%=rs2.getInt("ct") %></td>
 				</tr>
-				<tr>
-					<td class="mobile-hidden">7</td>
-					<td><a href="view.html" class="icon pc-hidden"><i
-							class="fas fa-user-tie"></i></a> <a href="view.html"
-						class="utxt pc-hidden">홍길동 [2021.08.12]</a> <a href="view.html">제목입니다.</a>
-					</td>
-					<td class="mobile-hidden"><a href="view.html">홍길동</a></td>
-					<td class="mobile-hidden">2021.08.12</td>
-					<td class="mobile-hidden">265</td>
-				</tr>
-				<tr>
-					<td class="mobile-hidden">6</td>
-					<td><a href="view.html" class="icon pc-hidden"><i
-							class="fas fa-user-tie"></i></a> <a href="view.html"
-						class="utxt pc-hidden">홍길동 [2021.08.12]</a> <a href="view.html">제목입니다.</a>
-					</td>
-					<td class="mobile-hidden"><a href="view.html">홍길동</a></td>
-					<td class="mobile-hidden">2021.08.12</td>
-					<td class="mobile-hidden">265</td>
-				</tr>
-				<tr>
-					<td class="mobile-hidden">5</td>
-					<td><a href="view.html" class="icon pc-hidden"><i
-							class="fas fa-user-tie"></i></a> <a href="view.html"
-						class="utxt pc-hidden">홍길동 [2021.08.12]</a> <a href="view.html">제목입니다.</a>
-					</td>
-					<td class="mobile-hidden"><a href="view.html">홍길동</a></td>
-					<td class="mobile-hidden">2021.08.12</td>
-					<td class="mobile-hidden">265</td>
-				</tr>
-				<tr>
-					<td class="mobile-hidden">4</td>
-					<td><a href="view.html" class="icon pc-hidden"><i
-							class="fas fa-user-tie"></i></a> <a href="view.html"
-						class="utxt pc-hidden">홍길동 [2021.08.12]</a> <a href="view.html">제목입니다.</a>
-					</td>
-					<td class="mobile-hidden"><a href="view.html">홍길동</a></td>
-					<td class="mobile-hidden">2021.08.12</td>
-					<td class="mobile-hidden">265</td>
-				</tr>
-				<tr>
-					<td class="mobile-hidden">3</td>
-					<td><a href="view.html" class="icon pc-hidden"><i
-							class="fas fa-user-tie"></i></a> <a href="view.html"
-						class="utxt pc-hidden">홍길동 [2021.08.12]</a> <a href="view.html">제목입니다.</a>
-					</td>
-					<td class="mobile-hidden"><a href="view.html">홍길동</a></td>
-					<td class="mobile-hidden">2021.08.12</td>
-					<td class="mobile-hidden">265</td>
-				</tr>
-				<tr>
-					<td class="mobile-hidden">2</td>
-					<td><a href="view.html" class="icon pc-hidden"><i
-							class="fas fa-user-tie"></i></a> <a href="view.html"
-						class="utxt pc-hidden">홍길동 [2021.08.12]</a> <a href="view.html">제목입니다.</a>
-					</td>
-					<td class="mobile-hidden"><a href="view.html">홍길동</a></td>
-					<td class="mobile-hidden">2021.08.12</td>
-					<td class="mobile-hidden">265</td>
-				</tr>
-				<tr>
-					<td class="mobile-hidden">1</td>
-					<td><a href="view.html" class="icon pc-hidden"><i
-							class="fas fa-user-tie"></i></a> <a href="view.html"
-						class="utxt pc-hidden">홍길동 [2021.08.12]</a> <a href="view.html">제목입니다.</a>
-					</td>
-					<td class="mobile-hidden"><a href="view.html">홍길동</a></td>
-					<td class="mobile-hidden">2021.08.12</td>
-					<td class="mobile-hidden">265</td>
-				</tr>
+			<%
+				}
+			%>
 			</tbody>
 		</table>
 		<div class="row">
@@ -134,7 +93,7 @@
 				</form>
 			</div>
 			 <div class="col-12 col-md-8 my-3 text-right">
-        		<a href="write.jsp?num=<%=request.getParameter("num")%>"><button type="button" class="btn btn-dark px-4 btn-write">쓰기</button></a>
+        		<a href="board/write.jsp?num=<%=request.getParameter("num")%>"><button type="button" class="btn btn-dark px-4 btn-write">쓰기</button></a>
       		</div>
 		</div>
 		<ul class="pagination my-3 justify-content-center">

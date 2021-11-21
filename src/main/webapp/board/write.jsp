@@ -24,8 +24,13 @@
 			
 			<div class="container mb-5">
 				<h1 class="text-center my-4">게시판 작성</h1>
-				<form action="board/writeok.jsp" id="writeform" name="writeform" method="post" enctype="multipart/form-data">
+				<form action="writeok.jsp" id="writeform" name="writeform" method="post" enctype="multipart/form-data">
+					<input type="hidden" name="wdate" value="<%=now %>" />
+					<input type="hidden" name="udate" value="<%=now %>" />
+					<input type="hidden" name="uip" value="<%=uip %>" />
+					<input type="hidden" name="category" value="<%=cnum %>" />
 					<ul class="write-title">
+					<% if(userid == null){ %>
 						<li class="row">
 							<label for="username" class="col-2 label">이름</label>
 							<div class="col-4 py-3">
@@ -38,6 +43,9 @@
 								<input type="password" class="form-control" name="userpass" id="userpass" placeholder="비밀번호"/>							
 							</div>
 						</li>
+						<%}else{ %>
+							<input type="hidden" name="userid" value="<%=userid %>" />
+						<%} %>
 						<li class="row">
 				          <label class="col-2 label" for="title">제목</label>
 				          <div class="col-10 py-3">

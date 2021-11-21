@@ -39,7 +39,7 @@ a{
 .userImage img{
 	width: 150px;
 }
-button[type=submit]{
+#formContent button[type=submit]{
 	background:#56baed;
 	border:none;
 	color:#fff;
@@ -54,13 +54,13 @@ button[type=submit]{
 	margin: 5px 20px 40px 20px;
 }
 
-button[type=submit]:hover{
+#formContent button[type=submit]:hover{
 	background:#39ace7;
 }
-botton[type=submit]:active{
+#formContent botton[type=submit]:active{
 	transform:scale(0.95);
 }
-input[type=text], input[type=password]{
+#formContent input[type=text], #formContent input[type=password]{
 	background: #f6f6f6;
 	border: none;
 	color: #0d0d0d;
