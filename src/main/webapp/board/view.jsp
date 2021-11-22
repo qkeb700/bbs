@@ -30,6 +30,19 @@
 						<li>
 							<label for="" class="bg-white">제목</label> 제목 
 						</li>
+						<li>
+					        <label class="bg-white" for="">작성일</label> <%=rs1.getString("udate") %>
+					    </li>
+					    <li>
+					        <label class="bg-white" for="">조회수</label> <%=rs1.getInt("ct") %>
+					    </li>
+					    <li class="content bg-white">
+					      	<div class="text-right"><%=file1 %> <%=file2 %></div>
+					        <%=rs1.getString("content") %>
+					    </li>
+					    <li>
+				        	<label class="bg-white" for="">작성자</label> <%=rs1.getString("username") %>
+				        </li>
 					</ul>
 				</div>
 				
